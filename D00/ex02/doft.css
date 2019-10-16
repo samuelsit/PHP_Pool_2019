@@ -1,0 +1,157 @@
+body {
+    background-color: dimgray;
+}
+
+.header {
+    background-color: #909090;
+    width: 80%;
+    height: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.shadow {
+    box-shadow: 8px 8px 8px black;
+    border-radius: 10px;
+}
+
+.doft {
+    padding: 10px;
+    width: 30%;
+    height: 85%;
+    text-align: left;
+}
+
+.loupe {
+    position:relative;
+    left: 78%;
+    bottom: 85%;
+    display:block;
+}
+
+.reload {
+    position:absolute;
+    left: 88%;
+    top: 2%;
+    display:block;
+}
+
+.close {
+    position:absolute;
+    left: 88%;
+    top: 12%;
+    display:block;
+}
+
+.leftnav {
+    margin-top: 1%;
+    background-color: #909090;
+    width: 10%;
+    height: 50%;
+    margin-left: 11.5%;
+    float:left;
+}
+
+.rightnav {
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: #909090;
+    width: 10%;
+    height: 50%;
+    float:left;
+}
+
+.image {
+    margin-left: 25%;
+    margin-right: 15%;
+    padding: 1%;
+}
+
+.content {
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: #909090;
+    width: 55%;
+    height: 65%;
+    float:left;
+}
+
+.imgcontent {
+    padding: 1%;
+}
+
+.book {
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.towel {
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10%;
+}
+
+.brick {
+    display: inline-block;
+}
+
+.divbrick {
+    margin-left: 10%;
+}
+
+.greeninput {
+    position: absolute;
+    top: 74%;
+    left: 9%;
+    width: 30%;
+    height: 20%;
+    background-color: #86FE88;
+}
+
+.small {
+    margin-top: 1%;
+    margin-left: 3%;
+    font-size: 1.2vw;
+}
+
+.big {
+    font-size: 2vw;
+}
+
+.italic {
+    font-size: 1.2vw;
+    margin-left: 3%;
+    font-style: italic;
+}
+
+input {
+    margin-left: 3%;
+    width: 80%;    
+}
+
+button {
+    width: 10%;
+}
+
+.oeil {
+    border:5px solid red;
+    border-radius: 10px;
+}
+
+.chaise1 {
+    position: absolute;
+    top:53%;
+    left:40%;
+    width:8%;
+    height:27%;
+}
+
+.ecran {
+    position: absolute;
+    top:54%;
+    left:65%;
+    width:11%;
+    height:15%;
+}

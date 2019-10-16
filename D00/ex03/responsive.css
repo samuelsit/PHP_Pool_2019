@@ -1,0 +1,100 @@
+@media screen and (min-width: 0px) and (max-width: 800px) {
+    .center {
+        text-align: center;
+        font-size: 0.9vh;
+    }
+    .text {
+        text-align: center;
+        font-size: 0.4vh;
+    }
+    .right {
+        text-align: right;
+        font-size: 0.4vh;
+    }
+    .left {
+        text-align: left;
+        font-size: 0.4vh;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1400px) {
+    .center {
+        text-align: center;
+        font-size: 1.5vh;
+    }
+    .text {
+        text-align: center;
+        font-size: 0.8vh;
+    }
+    .right {
+        text-align: right;
+        font-size: 0.8vh;
+    }
+    .left {
+        text-align: left;
+        font-size: 0.8vh;
+    }
+}
+@media screen and (min-width: 1400px) and (max-width: 1830px) {
+    .center {
+        text-align: center;
+        font-size: 2vh;
+    }
+    .text {
+        text-align: center;
+        font-size: 1vh;
+    }
+    .right {
+        text-align: right;
+        font-size: 1vh;
+    }
+    .left {
+        text-align: left;
+        font-size: 1vh;
+    }
+}
+@media screen and (min-width: 1830px) {
+    .center {
+        text-align: center;
+        font-size: 3vh;
+    }
+    .text {
+        text-align: center;
+        font-size: 1.5vh;
+    }
+    .right {
+        text-align: right;
+        font-size: 1.5vh;
+    }
+    .left {
+        text-align: left;
+        font-size: 1.5vh;
+    }
+}
+html {
+    height: 100%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIwsS2JgROUz7-aCHcSM9tO7OA-KtVz3bsS6vwsODTciwdbnC&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table {
+    width: 100%;
+    height: 95%;
+}
+.border {
+    border: solid 1px black;
+}
+.greyrayure {
+    background: linear-gradient(-45deg, white 25%, grey 25%, grey 50%, white 50%, white 75%, grey 75%, grey);
+    background-size:6px 6px;
+
+}
+.bluerayure {
+    background: linear-gradient(-45deg, white 25%, blue 25%, blue 50%, white 50%, white 75%, blue 75%, blue);
+    background-size:6px 6px;
+
+}
+.cyanrayure {
+    background: linear-gradient(-45deg, white 25%, cyan 25%, cyan 50%, white 50%, white 75%, cyan 75%, cyan);
+    background-size:6px 6px;
+
+}
