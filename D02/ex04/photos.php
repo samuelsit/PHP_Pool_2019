@@ -4,7 +4,7 @@
 if ($argc == 2) {
     $curl = curl_init($argv[1]);
     preg_match('/http[s]*:\/\/(www.[a-zA-Z0-9]+.[a-zA-Z]+)/', $argv[1], $path);
-    exec('mkdir '.$path[1]);  
+    exec('mkdir '.$path[1]);
     $html = file_get_contents($argv[1]);
     preg_match_all('/<img.*?src="(.*?)"/', $html, $balise_img);
     $url_img = array();
@@ -20,10 +20,13 @@ if ($argc == 2) {
     foreach ($url_img as $img) {
         $name = substr($img, strrpos($img, '/') + 1);
         $c = curl_init($img);
-        $fp = fopen($path[1].'/'.$name, 'w');
-        curl_setopt($c, CURLOPT_FILE, $fp);
-        curl_exec($c);
+        curl_setopt($c, CURLOPT_HEADER, 0);
+        curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($c, CURLOPT_BINARYTRANSFER,1);
+        $data = curl_exec($c);
         curl_close ($c);
+        $fp = fopen($path[1].'/'.$name, 'w');
+        fwrite($fp, $data);
         fclose($fp);
     }
 }
