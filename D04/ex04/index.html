@@ -7,7 +7,7 @@
 			border: none;
 			font-size: 3vw;
 			font-weight: bold;
-			border-bottom: double grey;
+			border-bottom: double blue;
 		}
 		input[type=password] {
 			width: 46.7vw;
@@ -25,6 +25,9 @@
 			margin-bottom: 1%;
 			font-weight: bold;
 		}
+		a {
+			margin-left: 4%;
+		}
 		body
 		{
 			font-weight: bold;
@@ -36,13 +39,15 @@
 		</style>
 	</head>
 	<body>
-		<form method="POST" action="create.php">
+		<form method="POST" action="login.php">
 			Identifiant: <input name="login" type="text" value="" />
 			<br />
 			Mot de Passe: <input type="password" name="passwd" value="" />
 			<br />
 			<input type="submit" name="submit" value="OK" />
 			<br />
+			<a href="create.html">Creer un compte</a>
+			<a href="modif.html">Modifier son mot de passe</a>
 		</form>
 	</body>
 </html>

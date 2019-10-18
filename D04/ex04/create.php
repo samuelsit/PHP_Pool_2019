@@ -26,6 +26,7 @@ if ($_POST && $_POST['submit'] == "OK" && $_POST['login'] !== "" && $_POST['pass
 		$data[] = array("login" => $_POST['login'], "passwd" => hash("whirlpool", $_POST['passwd']));
 		file_put_contents("../private/passwd", serialize($data));
 		echo "OK\n";
+		header('Location: index.html');
 	}
 }
 else
