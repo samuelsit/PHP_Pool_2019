@@ -1,0 +1,356 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+	width: 80%;
+	margin:auto;
+}
+
+header {
+	width: 100%;
+	margin-top: 15px;
+	max-height: 7.2vw;
+}
+
+aside {
+	display: inline-block;
+	min-height: 23vw;
+	width: 9.9%;
+	margin: 30px 2.5% 0 2.5%;
+	padding: 20px 0 20px 0;
+	text-align: center;
+	vertical-align: top;
+}
+
+figure {
+	width: 69.6%;
+	display: inline-block;
+	margin: 30px 0 0 0;
+	padding: 15px;
+}
+div {
+	margin: 0;
+}
+
+img {
+	width: 100%;
+}
+
+p {
+	margin: 0;
+	line-height: 1.4em;
+	padding-top: 10px;
+}
+
+button {
+	min-height: 1.2vw;
+	border-radius: 3px;
+	background-color: #eeeeee;
+	font-size: 0.8em;
+	border: 1px solid #c3c2c2;
+}
+input {
+	min-height: 1.2vw;
+	margin-right: 0.5vw;
+}
+
+.talk {
+	cursor: url("../resources/cursor_bubble.png"), pointer;
+}
+
+.grab {
+	cursor: url("../resources/cursor_grab.png"), pointer;
+}
+
+.banner {
+	max-height: 7.2vw;
+}
+
+.green-box {
+	background-color: #88ff89;
+	min-height: 8.5vw;
+	width: 30vw;
+	position: relative;
+	bottom: 4vw;
+	right: 3.2vw;
+	padding: 15px;
+	font-family: sans-serif;
+	font-size: 1.4em;
+}
+
+.round-border {
+	border-radius: 10px;
+	box-shadow: 15px 15px 15px #020202;
+}
+
+.action {
+	width: 4vw;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+.row {
+	width: 100%;
+	display: inline-block;
+	clear: both;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	position: relative;
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.col-1 {
+	max-width: 8.333333%;
+}
+
+.col-2 {
+	max-width: 16%;
+}
+
+.col-3 {
+	/*max-width: 25%;*/
+	/**/max-width: 24%;
+	/**/margin-left: 0.4%;
+}
+
+.col-4 {
+	max-width: 33.333333%;
+}
+
+.col-5 {
+	max-width: 41.666667%;
+}
+
+.col-6 {
+	max-width: 50%;
+}
+
+.col-7 {
+	max-width: 58.333333%;
+}
+
+.col-8 {
+	max-width: 66.666667%;
+}
+
+.col-9 {
+	max-width: 75%;
+}
+
+.col-10 {
+	max-width: 83.333333%;
+}
+
+.col-11 {
+	max-width: 91.666667%;
+}
+
+.col-12 {
+	max-width: 100%;
+}
+
+.offset-1 {
+	margin-left: 8.333333%;
+}
+
+.offset-2 {
+	margin-left: 16.666667%;
+}
+
+.offset-3 {
+	margin-left: 25%;
+}
+
+.offset-4 {
+	margin-left: 33.333333%;
+}
+
+.offset-5 {
+	margin-left: 41.666667%;
+}
+
+.offset-6 {
+	margin-left: 49.6%;
+}
+
+.offset-7 {
+	margin-left: 58%;
+}
+
+.offset-8 {
+	margin-left: 66.4%;
+}
+
+.offset-9 {
+	margin-left: 75%;
+}
+
+.offset-10 {
+	margin-left: 83.333333%;
+}
+
+.offset-11 {
+	margin-left: 91.666667%;
+}
+
+.top {
+	vertical-align: top;
+}
+
+.center {
+	text-align: center;
+}
+
+.portrait {
+	width: 5vw;
+}
+
+.active {
+	border: 5px solid red;
+	border-radius: 10px;
+}
+
+.alert {
+	font-size: 2em;
+	color: red;
+}
+
+.inventoryItem {
+	margin-right: 2vw;
+}
+
+.modal {
+	width: 50%;
+	position: absolute;
+	text-align: center;
+	top: 10vw;
+	background-color: white;
+	left: 25%;
+	padding: 15px;
+	box-shadow: 0 0 0 100vw rgba(0, 0, 0, .5);
+	border-radius: 10px;
+}
+
+.close {
+	position: absolute;
+	right: 1vw;
+	color: orange;
+	font-size: 1.5em;
+}
+
+.close img {
+	width: 1.2vw;
+}
+
+.hidden {
+	display: none;
+}
+
+#codeBox p {
+	font-family: monospace;
+	font-size: 2em;
+}
+
+#brick {
+	width: 6.8vw;
+	height: 4.5vw;
+}
+
+#loupe {
+	text-align: right;
+	position: relative;
+	top:0.8vw;
+	right: 1.5vw;
+}
+
+#close {
+	width: 1vw;
+	position: absolute;
+	right: 0vw;
+	bottom: 0.5vw;
+}
+
+#reload {
+	width: 1vw;
+	position: absolute;
+	top: 0.5vw;
+	right: 0vw;
+}
+
+#banner {
+	width: 25vw;
+	padding: 0.5vw;
+}
+
+#big {
+	font-family: serif;
+	font-size: 2.5em;
+}
+
+#shadow {
+	text-shadow: 5px 6px 5px red;
+}
+
+#inventory {
+	background-color: #909090;
+	padding: 15px;
+	margin: 15px 0 15px 0;
+	vertical-align: middle;
+}
+
+#clock {
+	padding: 15px;
+	margin-left: 15px;
+	font-size: 2em;
+	background-color: black;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-family: monospace;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.border {
+	border: 2px solid black;
+}
+
+.product_img {
+	height: 10vw;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+  
+table, th, td {
+	border: 1px solid black;
+	text-align: center;
+}
