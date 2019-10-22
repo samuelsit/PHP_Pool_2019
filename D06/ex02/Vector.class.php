@@ -26,6 +26,10 @@ class Vector {
             printf("Vector( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
     }
 
+    public function magnitude() {
+        return (sqrt(pow($this->_x, 2) + pow($this->_y, 2) + pow($this->_z, 2)));
+    }
+
     public function getX() {
         return ($this->_x);
     }
