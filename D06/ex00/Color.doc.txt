@@ -1,0 +1,25 @@
+<- Color ----------------------------------------------------------------------
+La classe Color gère les couleurs RVB.
+
+Une instance peut être construite à partir d’une valeur RVB:
+nouvelle couleur (array ('rgb' => 12345));
+
+Ou de constituants distincts rouge, vert et bleu:
+nouvelle couleur (tableau ('rouge' => 255, 'vert' => 255, 'bleu' => 255));
+
+Les valeurs constitutives rouge, verte, bleue et RVB sont converties en entiers.
+Les constituants négatifs ou> à 255 couleurs sont laissés tels quels.
+Toute autre utilisation est un comportement indéfini.
+
+La classe fournit les méthodes suivantes:
+
+Ajout de couleur (Color $ rhs);
+Ajoute chaque couleur constitutive et retourne une nouvelle instance Color.
+
+Couleur sub (Couleur $ rhs);
+Soustrait chaque couleur constitutive et retourne une nouvelle instance Color.
+
+Couleur mult ($ f);
+Multiplie chaque couleur constitutive par le facteur $ f et renvoie une nouvelle couleur
+exemple.
+---------------------------------------------------------------------- Color ->

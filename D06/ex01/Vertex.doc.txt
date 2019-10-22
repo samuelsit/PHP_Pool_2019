@@ -1,0 +1,28 @@
+<- Vertex ----------------------------------------------------------------------
+La classe Vertex gère  la représentation d’un point dans l’espace.
+
+Une instance peut être construite à partir de plusieurs caracteristiques:
+(Obligatoire)
+Son abscisse x,
+Son ordonnée y,
+Sa profondeur z,
+(Optionel)
+Sa coordonnée homogène w,
+Sa couleur.
+
+Plusieurs methodes sont à votre disposition:
+Set($),
+Get().
+
+Quelques exemples pour modifier un attribut:
+SetColor($color);
+SetX($x);
+SetY($y);
+etc...
+
+Quelques exemples pour récupérer un attribut:
+GetColor();
+GetX();
+GetY();
+etc...
+---------------------------------------------------------------------- Vertex ->
