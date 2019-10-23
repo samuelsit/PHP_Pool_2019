@@ -1,3 +1,28 @@
 <- Vector ----------------------------------------------------------------------
-Your documentation here.
+La classe Vector gère la représentation des directions ou des déplacements.
+
+Une instance peut être construite à partir de plusieurs caracteristiques:
+- ’dest’ : vertex de destination du vecteur, obligatoire,
+
+- ’orig’ : vertex d’origine du vecteur, optionnel, vaut une instance fraiche du vertex x=0, y=0, z=0, w=1 par défaut.
+
+
+Plusieurs methodes sont à votre disposition:
+- magnitude(): donne la norme du vecteur instancié.
+
+- normalize(): donne le vecteur normalisé correspondant (une nouvelle copie) si l'instance était déjà normalisée)
+
+- add(Vector): donne le résultat de l'addition entre l'instance actuelle et le vecteur en parametre.
+
+- sub(Vector): donne le résultat de la soustraction entre l'instance actuelle et le vecteur en parametre.
+
+- opposite(): retourne le vecteur opposé;
+
+- scalarProduct($k): retourne le produit du vecteur avec un scalaire.
+
+- dotProduct(Vector): retourne le produit scalaire de deux vecteurs.
+
+- cos(Vector): renvoie le cosinus entre l'instance actuelle et le vecteur en parametre.
+
+- crossProduct(Vecteur): retourne le produit en croix de deux vecteurs dans un repère main droite.
 ---------------------------------------------------------------------- Vector ->

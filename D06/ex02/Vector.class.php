@@ -23,11 +23,51 @@ class Vector {
             $this->_z = $this->_dest->getZ() - $this->_orig->getZ();
         }
         if (self::$verbose == TRUE)
-            printf("Vector( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
+            printf("Vector( x:%0.2f, y:%0.2f, z:%0.2f, w:%0.2f ) constructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
     }
 
     public function magnitude() {
         return (sqrt(pow($this->_x, 2) + pow($this->_y, 2) + pow($this->_z, 2)));
+    }
+
+    public function normalize() {
+        $norme = $this->magnitude();
+        if ($norme == 1) {
+            return clone $this;
+        }
+        return new Vector(array('dest' => new Vertex(array('x' => $this->_x / $norme, 'y' => $this->_y / $norme, 'z' => $this->_z / $norme))));
+    }
+
+    public function add(Vector $rhs) {
+        return new Vector(array('dest' => new Vertex(array('x' => $this->_x + $rhs->_x, 'y' => $this->_y + $rhs->_y, 'z' => $this->_z + $rhs->_z))));
+    }
+
+    public function sub(Vector $rhs) {
+        return new Vector(array('dest' => new Vertex(array('x' => $this->_x - $rhs->_x, 'y' => $this->_y - $rhs->_y, 'z' => $this->_z - $rhs->_z))));
+    }
+
+    public function opposite() {
+        return new Vector(array('dest' => new Vertex(array('x' => $this->_x * -1, 'y' => $this->_y * -1, 'z' => $this->_z * -1))));
+    }
+
+    public function scalarProduct($k) {
+        return new Vector(array('dest' => new Vertex(array('x' => $this->_x * $k, 'y' => $this->_y * $k, 'z' => $this->_z * $k))));
+    }
+
+    public function dotProduct(Vector $rhs) {
+        return (($this->_x * $rhs->_x) + ($this->_y * $rhs->_y) + ($this->_z * $rhs->_z));
+    }
+
+    public function cos(Vector $rhs) {
+        return ((($this->_x * $rhs->_x) + ($this->_y * $rhs->_y) + ($this->_z * $rhs->_z)) / sqrt((pow($this->_x, 2) + pow($this->_y, 2) + pow($this->_z, 2)) * (pow($rhs->_x, 2) + pow($rhs->_y, 2) + pow($rhs->_z, 2))));
+    }
+
+    public function crossProduct(Vector $rhs) {
+        return new Vector(array('dest' => new Vertex(array(
+            'x' => $this->_y * $rhs->getZ() - $this->_z * $rhs->getY(),
+            'y' => $this->_z * $rhs->getX() - $this->_x * $rhs->getZ(),
+            'z' => $this->_x * $rhs->getY() - $this->_y * $rhs->getX()
+        ))));
     }
 
     public function getX() {
@@ -47,13 +87,13 @@ class Vector {
     }
 
     public function __toString() {
-        $str = sprintf("Vector( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
+        $str = sprintf("Vector( x:%0.2f, y:%0.2f, z:%0.2f, w:%0.2f )", $this->_x, $this->_y, $this->_z, $this->_w);
         return ($str);
     }
 
     public function __destruct() {
         if (self::$verbose == TRUE)
-            printf("Vector( x: %0.2f, y: %0.2f, z:%0.2f, w:%0.2f ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
+            printf("Vector( x:%0.2f, y:%0.2f, z:%0.2f, w:%0.2f ) destructed\n", $this->_x, $this->_y, $this->_z, $this->_w);
     }
 
     public static function doc() {
