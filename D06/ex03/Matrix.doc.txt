@@ -1,0 +1,28 @@
+<- Matrix ----------------------------------------------------------------------
+La classe Matrix gère les matrices 4x4.
+il a une valeur constante pour le preset:
+IDENTITY = 'IDENTITY',
+SCALE = 'SCALE',
+RX = 'Ox ROTATION',
+RY = 'Oy ROTATION',
+RZ = 'Oz ROTATION',
+TRANSLATION = 'TRADUCTION',
+PROJECTION = 'PROJECTION';
+
+Dont dépendent respectivement les arguments suivants:
+IDENTITY
+SCALE
+RX -> angle de rotation
+RY -> angle de rotation
+RZ -> angle de rotation
+TRANSLATION -> vecteur (classe Vector) de la translation
+PROJECTION -> Champ de vision (en degrés), Ratio (largeur / hauteur de l’écran)
+
+Quand une matrice est créée, vous ne pourrez plus changer ses valeurs après il n'y a donc pas de setters;
+
+Les méthodes suivantes sont prevue pour cette classe:
+
+- mult(): retourne une nouvelle matrice résulat de la multiplication des deux matrices.
+
+- transformVertex(): retourne un nouveau vertex résultat de la transformation du vertex par la matrice.
+---------------------------------------------------------------------- Matrix ->
