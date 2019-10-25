@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Ballon</title>
+        <style>
+            #ballon {
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                transition: .2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ballon" onclick="bigger()" onmouseout="smaller()"></div>
+        <script>
+            var ballon = document.getElementById("ballon");
+            var size = 200;
+            var color = ["red", "green", "blue"];
+            var i = 0;
+
+            function bigger() {
+                size += 10;
+                if (size > 420)
+                    size = 200;
+                if (i == 2)
+                    i = 0;
+                else
+                    i++;
+                ballon.style.height = size + 'px';
+                ballon.style.width = size + 'px';
+                ballon.style.backgroundColor = color[i];
+            }
+
+            function smaller() {
+                if (size >= 205)
+                    size -= 5;
+                if (i == 0)
+                    i = 2;
+                else
+                    i--;
+                ballon.style.height = size + 'px';
+                ballon.style.width = size + 'px';
+                ballon.style.backgroundColor = color[i];
+            }
+        </script>
+    </body>
+</html>

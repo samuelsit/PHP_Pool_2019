@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Calculette</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <form id="calcul" method="dialog">
+            <input type="text" id="nb1">
+            <select id="ope">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+            </select>
+            <input type="text" id="nb2">
+            <input type="submit" value="Try me!">
+        </form>
+        <script>
+            var calcul = $("#calcul");
+
+            function res(value) {
+                alert(value);
+                console.log(value);
+            }
+
+            function positive(nb) {
+                if (isNaN(nb) || parseInt(nb, 10) == NaN || nb < 0)
+                    return false;
+                return true;
+            }
+
+            calcul.submit(function () {
+                var nb1 = $("#nb1").val();
+                var nb2 = $("#nb2").val();
+                var ope = $("#ope").val();
+
+                if (positive(nb1) == false || positive(nb2) == false) {
+                    alert("Error :(");
+                    return false;
+                }
+                nb1 = parseInt(nb1, 10);
+                nb2 = parseInt(nb2, 10);
+                if (nb1 < 0 || nb2 < 0) {
+                    alert("Error :(");
+                    return false;
+                }
+                if ((ope == "/" || ope == "%") && nb2 == 0)
+                    res("It's over 9000!");
+                else if (ope == "/")
+                    res(nb1 / nb2);
+                else if (ope == "%")
+                    res(nb1 % nb2);
+                else if (ope == "+")
+                    res(nb1 + nb2);
+                else if (ope == "-")
+                    res(nb1 - nb2);
+                else if (ope == "*")
+                    res(nb1 * nb2);
+                return false;
+            });
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+        </script>
+    </body>
+</html>
