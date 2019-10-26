@@ -2,10 +2,12 @@ $(document).ready(function() {
     $.ajax ({
         url: 'select.php',
         success: function (res) {
-            if (Array.isArray(res) && res[0] != null) {
-                for (var i = 0; i < res.length; i++) {
-                    if (res[i] != null) {
-                        buf = res[i].split(';');
+            var tab = JSON.parse(res);
+
+            if (Array.isArray(tab) && tab[0] != null) {
+                for (var i = 0; i < tab.length; i++) {
+                    if (tab[i] != null) {
+                        buf = tab[i].split(';');
                         create(buf[1]);
                     }
                 }
